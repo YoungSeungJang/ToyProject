@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instrument | Who We Are</title>
     <link rel="stylesheet" href="./whoWeAre.css" />
+    <!-- Swiper라이브러리 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- aos라이브러리 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -17,15 +23,88 @@
         working virtually across the U.S. and IRL in Portland, Brooklyn, and Los Angeles.
       </div>
       <!-- 이미지 슬라이드 -->
-      <div id="imgSlideBox">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <iframe
+              src="https://player.vimeo.com/video/765793412?h=03a779893c&loop=1&background=1&app_id=122963"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              style="width: 80%; height: 100%"
+              title="wave-2_2"
+              data-ready="true"
+            ></iframe>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.prismic.io/instrument-v5/ccce51a7-6abf-4bf5-bb80-6bdb2ccd233e_2.jpg?auto=compress,format&w=640&dpr=1"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.prismic.io/instrument-v5/02803632-7ec5-4207-ad38-8d0753c0c456_3.jpg?auto=compress,format&w=640&dpr=1"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.prismic.io/instrument-v5/976a032c-18cc-4775-b158-52d8b9a0a187_4.jpg?auto=compress,format&w=640&dpr=1"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.prismic.io/instrument-v5/62ebfc6b-1e2d-4199-85a4-256810e3e676_5.jpg?auto=compress,format&w=640&dpr=1"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.prismic.io/instrument-v5/209d64b4-017a-4a93-b428-cf0fa6cce4f1_6.jpg?auto=compress,format&w=640&dpr=1"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.prismic.io/instrument-v5/e1ed98ec-2b2f-4c74-8c80-f551e9947f06_7.jpg?auto=compress,format&w=640&dpr=1"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <iframe
+              src="https://player.vimeo.com/video/424920560?h=76980457e2&loop=1&background=1&app_id=122963"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              style="width: 80%; height: 100%"
+              title="who-we-are-loop"
+              data-ready="true"
+            ></iframe>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.prismic.io/instrument-v5/f0aa6dcc-7376-4454-a180-f877e2225cc5_9.jpg?auto=compress,format&w=640&dpr=1"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <iframe
+              src="https://player.vimeo.com/video/424921418?h=920053bf67&loop=1&background=1&app_id=122963"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              style="width: 80%; height: 100%"
+              title="who-we-are-building-loop"
+              data-ready="true"
+            ></iframe>
+          </div>
+          ...
+        </div>
       </div>
       <div id="text2">
         <div>
@@ -69,7 +148,7 @@
       </div>
       <div id="text4">Meet Our Leaders</div>
       <!-- 1 img -->
-      <div class="imgBox">
+      <div class="imgBox" data-aos="fade-up">
         <div class="images">
           <div>
             <img
@@ -98,7 +177,7 @@
         </div>
       </div>
       <!-- 2 img -->
-      <div class="imgBox">
+      <div class="imgBox" data-aos="fade-up">
         <div class="images">
           <div>
             <img
@@ -127,7 +206,7 @@
         </div>
       </div>
       <!-- 3 img -->
-      <div class="imgBox">
+      <div class="imgBox" data-aos="fade-up">
         <div class="images">
           <div>
             <img
@@ -156,7 +235,7 @@
         </div>
       </div>
       <!-- 4 img -->
-      <div class="imgBox">
+      <div class="imgBox" data-aos="fade-up">
         <div class="images">
           <div>
             <img
@@ -184,12 +263,26 @@
           </div>
         </div>
       </div>
-      <div id="text5">
+      <div id="text5" data-aos="fade-down">
         <div>Let's work together</div>
         <div>Careers &nbsp;→</div>
       </div>
     </main>
     <!-- FOOTER -->
     <footer></footer>
+    <script>
+      // AOS
+      AOS.init();
+
+      // Swiper
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 3.5,
+        centeredSlides: false,
+
+      });
+    </script>
   </body>
 </html>
